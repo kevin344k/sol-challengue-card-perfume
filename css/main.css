@@ -1,0 +1,123 @@
+/*fuentes*/
+/*colours*/
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+}
+
+.main-section-up {
+  width: 350px;
+  height: 250px;
+  background-image: url("../images/image-product-mobile.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 0;
+}
+
+.main-section-down {
+  width: 350px;
+  height: auto;
+  padding: 20px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0 0 20px 20px;
+}
+.main-section-down .span-product-type, .main-section-down .text-product--description, .main-section-down .div-price--group .span-price--old {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 5px;
+  color: hsl(228, 12%, 48%);
+  margin-bottom: 10px;
+}
+.main-section-down .product--name, .main-section-down .div-price--group .span-price {
+  font-size: 3.3rem;
+  font-family: "Fraunces", serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.main-section-down .text-product--description, .main-section-down .div-price--group .span-price--old {
+  letter-spacing: 0;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.main-section-down .div-price--group {
+  width: 100%;
+  margin-bottom: 20px;
+  height: auto;
+}
+.main-section-down .div-price--group .span-price {
+  color: hsl(158, 36%, 37%);
+}
+.main-section-down .div-price--group .span-price--old {
+  text-decoration: line-through;
+  vertical-align: middle;
+  margin-left: 15px;
+}
+.main-section-down button {
+  background-color: hsl(158, 36%, 37%);
+  width: 100%;
+  padding: 15px;
+  border-style: none;
+  border: none;
+  border-radius: 10px;
+}
+.main-section-down button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.main-section-down button span {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  display: inline-block;
+}
+.main-section-down button:hover {
+  background-color: rgb(43, 92, 74);
+}
+
+@media (min-width: 1440px) {
+  main {
+    flex-direction: row;
+    width: 100%;
+    max-width: none;
+  }
+  main .main-section-up {
+    width: 310px;
+    height: 400px;
+    background-image: url(../images/image-product-desktop.jpg);
+    background-size: cover;
+    border-radius: 20px 0 0 20px;
+  }
+  main .main-section-down {
+    border-radius: 0 20px 20px 0;
+  }
+}/*# sourceMappingURL=main.css.map */

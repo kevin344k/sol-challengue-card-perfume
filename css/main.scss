@@ -1,0 +1,140 @@
+/*fuentes*/
+$font_Fraunces: 'Fraunces', serif;
+$font_Monserrat: 'Montserrat', sans-serif;
+$font_paragraph:1.4rem;
+/*colours*/
+$col_Dark_cyan: hsl(158, 36%, 37%);
+$col_Cream: hsl(30, 38%, 92%);
+
+$Very_dark_blue: hsl(212, 21%, 14%);
+$Dark_grayish_blue: hsl(228, 12%, 48%);
+$just_White: hsl(0, 0%, 100%);
+
+
+
+html{
+    font-size: 62.5%;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: $col_Cream;
+
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+}
+.main-section-up{
+    width: 350px;
+    height: 250px;
+    background-image: url("../images/image-product-mobile.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+   background-size: contain;
+   border-radius: 20px 20px 0 0;
+   margin-bottom: 0;
+}
+.main-section-down{
+    width: 350px;
+    height: auto;
+    padding: 20px;
+    background-color: $just_White;
+    border-radius: 0 0 20px 20px ;
+    .span-product-type{
+        display: inline-block;
+        font-size: $font_paragraph;
+        font-weight: 500;
+        font-family: $font_Monserrat;
+        letter-spacing: 5px;
+        color: $Dark_grayish_blue;
+        margin-bottom: 10px;
+
+    }
+    .product--name{
+        font-size: 3.3rem;
+        font-family: $font_Fraunces;
+        font-weight: bold;
+        margin-bottom: 10px
+    }
+    .text-product--description{
+        @extend .span-product-type;
+        letter-spacing: 0;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    .div-price--group{
+        width: 100%;
+        margin-bottom: 20px;
+        height: auto;
+        
+        .span-price{
+            @extend .product--name;
+            color: $col_Dark_cyan;
+        }
+        .span-price--old{
+            @extend  .text-product--description;
+            text-decoration: line-through;
+            vertical-align: middle;
+            margin-left: 15px;
+
+        }
+
+    }
+    button{
+        background-color: $col_Dark_cyan;
+        width: 100%;
+        padding: 15px;
+        border-style: none;
+        border: none;
+        border-radius: 10px;
+      
+        img{
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        span{
+            color: $just_White;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            font-family: $font_Monserrat;
+            font-weight: 500;
+            display: inline-block;
+        }
+    }
+    button:hover{
+        background-color: rgb(43, 92, 74)
+    }
+}
+
+@media(min-width:1440px){
+main{
+    flex-direction: row;
+    width: 100%;
+    max-width: none;
+    .main-section-up{
+        width: 310px;
+        height: 400px;
+        background-image: url(../images/image-product-desktop.jpg);
+        background-size: cover;
+        border-radius: 20px 0 0 20px;
+    }
+    .main-section-down{
+        border-radius: 0 20px 20px 0;
+    }
+}
+}
